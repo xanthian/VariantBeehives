@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "variantbeehives",
+  "version": "${version}",
+  "name": "Variant Bee Hives",
+  "description": "Bee Hives for all wood types",
+  "authors": ["Xanthian"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.xanthian.variantbeehives.Initialise"],
+    "fabric-datagen": ["net.xanthian.variantbeehives.DataGenerator"]
+  },
+  "mixins": ["variantbeehives.mixins.json"],
+  "accessWidener": "variantbeehives.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric": "*",
+    "minecraft": "1.20.x",
+    "java": ">=17"
+    }
+}

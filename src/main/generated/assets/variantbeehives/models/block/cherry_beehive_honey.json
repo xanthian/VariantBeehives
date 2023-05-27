@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "variantbeehives:block/cherry_beehive_end",
+    "front": "variantbeehives:block/cherry_beehive_front_honey",
+    "particle": "variantbeehives:block/cherry_beehive_side",
+    "side": "variantbeehives:block/cherry_beehive_side",
+    "top": "variantbeehives:block/cherry_beehive_end"
+  }
+}

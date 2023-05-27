@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "variantbeehives:acacia_beehive", "required": false},
+    {"id": "variantbeehives:bamboo_beehive", "required": false},
+    {"id": "variantbeehives:cherry_beehive", "required": false},
+    {"id": "variantbeehives:dark_oak_beehive", "required": false},
+    {"id": "variantbeehives:jungle_beehive", "required": false},
+    {"id": "variantbeehives:oak_beehive", "required": false},
+    {"id": "variantbeehives:spruce_beehive", "required": false},
+    {"id": "variantbeehives:mangrove_beehive", "required": false},
+    {"id": "variantbeehives:warped_beehive", "required": false},
+    {"id": "variantbeehives:crimson_beehive", "required": false}
+  ]
+}
