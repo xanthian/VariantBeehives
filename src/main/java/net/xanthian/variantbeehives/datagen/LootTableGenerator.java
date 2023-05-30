@@ -12,16 +12,15 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        beehiveDrops(Beehives.ACACIA_BEEHIVE);
-        beehiveDrops(Beehives.BAMBOO_BEEHIVE);
-        beehiveDrops(Beehives.CHERRY_BEEHIVE);
-        beehiveDrops(Beehives.DARK_OAK_BEEHIVE);
-        beehiveDrops(Beehives.JUNGLE_BEEHIVE);
-        beehiveDrops(Beehives.MANGROVE_BEEHIVE);
-        beehiveDrops(Beehives.BIRCH_BEEHIVE);
-        beehiveDrops(Beehives.SPRUCE_BEEHIVE);
-        beehiveDrops(Beehives.CRIMSON_BEEHIVE);
-        beehiveDrops(Beehives.WARPED_BEEHIVE);
-        beehiveDrops(Beehives.MANGROVE_BEEHIVE);
+        addDrop(Beehives.ACACIA_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.BAMBOO_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.BIRCH_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.CHERRY_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.CRIMSON_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.DARK_OAK_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.JUNGLE_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.MANGROVE_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.SPRUCE_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.WARPED_BEEHIVE, block -> beehiveDrops(block));
     }
 }

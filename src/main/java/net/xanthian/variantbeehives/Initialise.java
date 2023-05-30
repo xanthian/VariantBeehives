@@ -2,6 +2,7 @@ package net.xanthian.variantbeehives;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -12,8 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantbeehives.block.Beehives;
 import net.xanthian.variantbeehives.utils.ModPOITypes;
-
-import java.util.Comparator;
+import net.xanthian.variantbeehives.utils.ModRegistries;
 
 public class Initialise implements ModInitializer {
 
@@ -25,21 +25,28 @@ public class Initialise implements ModInitializer {
     public void onInitialize() {
         // Custom Item Group
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
-                .displayName(Text.literal("Variant Beehives"))
+                .displayName(Text.translatable("variantbeehives.group.variantbeehives"))
                 .icon(() -> new ItemStack(Beehives.MANGROVE_BEEHIVE))
                 .entries((context, entries) -> {
-                    entries.addAll(Registries.ITEM.getIds().stream()
-                            .filter(identifier -> identifier.getNamespace().matches(MOD_ID))
-                            .sorted(Comparator.comparing(Identifier::getPath))
-                            .map(Registries.ITEM::get)
-                            .map(ItemStack::new)
-                            .filter(input -> !input.isEmpty())
-                            .toList());
+                    entries.add(Beehives.ACACIA_BEEHIVE);
+                    entries.add(Beehives.BAMBOO_BEEHIVE);
+                    entries.add(Beehives.BIRCH_BEEHIVE);
+                    entries.add(Beehives.CHERRY_BEEHIVE);
+                    entries.add(Beehives.CRIMSON_BEEHIVE);
+                    entries.add(Beehives.DARK_OAK_BEEHIVE);
+                    entries.add(Beehives.JUNGLE_BEEHIVE);
+                    entries.add(Beehives.MANGROVE_BEEHIVE);
+                    entries.add(Blocks.BEEHIVE); // Oak
+                    entries.add(Beehives.SPRUCE_BEEHIVE);
+                    entries.add(Beehives.WARPED_BEEHIVE);
                 })
                 .build());
 
         // Fletching Table Registration
         Beehives.registerVanillaHives();
+
+        // Fuel & Flammable Block registration
+        ModRegistries.registerFuelandFlammable();
 
         // Fletcher POI Registration
         ModPOITypes.init();

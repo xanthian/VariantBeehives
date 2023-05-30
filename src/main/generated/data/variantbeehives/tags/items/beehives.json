@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "variantbeehives:acacia_beehive",
+    "variantbeehives:bamboo_beehive",
+    "variantbeehives:birch_beehive",
+    "variantbeehives:cherry_beehive",
+    "variantbeehives:crimson_beehive",
+    "variantbeehives:dark_oak_beehive",
+    "variantbeehives:jungle_beehive",
+    "variantbeehives:mangrove_beehive",
+    "variantbeehives:spruce_beehive",
+    "variantbeehives:warped_beehive"
+  ]
+}

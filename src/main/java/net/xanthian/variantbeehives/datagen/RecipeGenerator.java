@@ -38,6 +38,15 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.BAMBOO_BEEHIVE)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.BIRCH_BEEHIVE)
+                .input('H', Items.HONEYCOMB)
+                .input('P', Blocks.BIRCH_PLANKS)
+                .pattern("PPP")
+                .pattern("HHH")
+                .pattern("PPP")
+                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.BIRCH_BEEHIVE)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.CHERRY_BEEHIVE)
                 .input('H', Items.HONEYCOMB)
                 .input('P', Blocks.CHERRY_PLANKS)
@@ -46,6 +55,15 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .pattern("PPP")
                 .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.CHERRY_BEEHIVE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.CRIMSON_BEEHIVE)
+                .input('H', Items.HONEYCOMB)
+                .input('P', Blocks.CRIMSON_PLANKS)
+                .pattern("PPP")
+                .pattern("HHH")
+                .pattern("PPP")
+                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.CRIMSON_BEEHIVE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.DARK_OAK_BEEHIVE)
                 .input('H', Items.HONEYCOMB)
@@ -74,15 +92,6 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.MANGROVE_BEEHIVE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.BIRCH_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.BIRCH_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.BIRCH_BEEHIVE)));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.SPRUCE_BEEHIVE)
                 .input('H', Items.HONEYCOMB)
                 .input('P', Blocks.SPRUCE_PLANKS)
@@ -91,15 +100,6 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .pattern("PPP")
                 .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.SPRUCE_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.CRIMSON_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.CRIMSON_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.CRIMSON_BEEHIVE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.WARPED_BEEHIVE)
                 .input('H', Items.HONEYCOMB)
