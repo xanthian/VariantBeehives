@@ -2,12 +2,14 @@ package net.xanthian.variantbeehives.utils;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraft.world.poi.PointOfInterestTypes;
+
 import net.xanthian.variantbeehives.block.Beehives;
 import net.xanthian.variantbeehives.mixin.PointOfInterestTypesAccessor;
 
@@ -26,7 +28,6 @@ public class ModPOITypes {
 
         PointOfInterestType beePoiType = Registries.POINT_OF_INTEREST_TYPE.get(PointOfInterestTypes.BEEHIVE);
 
-        // NOTE: PointOfInterestType.blockStates is accessible by access widener
         List<BlockState> beeBlockStates = new ArrayList<BlockState>(beePoiType.blockStates);
 
         for (Block block : Beehives.MOD_BEEHIVES.values()) {
@@ -39,7 +40,6 @@ public class ModPOITypes {
             beeBlockStates.addAll(blockStates);
         }
 
-        // NOTE: PointOfInterestType.blockStates is mutable by access widener
         beePoiType.blockStates = ImmutableSet.copyOf(beeBlockStates);
     }
 }

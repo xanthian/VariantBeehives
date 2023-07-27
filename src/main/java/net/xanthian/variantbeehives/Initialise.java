@@ -2,6 +2,7 @@ package net.xanthian.variantbeehives;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -11,6 +12,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
 import net.xanthian.variantbeehives.block.Beehives;
 import net.xanthian.variantbeehives.utils.ModPOITypes;
 import net.xanthian.variantbeehives.utils.ModRegistries;
@@ -23,7 +25,7 @@ public class Initialise implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // Custom Item Group
+
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("variantbeehives.group.variantbeehives"))
                 .icon(() -> new ItemStack(Beehives.MANGROVE_BEEHIVE))
@@ -42,13 +44,10 @@ public class Initialise implements ModInitializer {
                 })
                 .build());
 
-        // Fletching Table Registration
         Beehives.registerVanillaHives();
 
-        // Fuel & Flammable Block registration
         ModRegistries.registerFuelandFlammable();
 
-        // Fletcher POI Registration
         ModPOITypes.init();
     }
 }

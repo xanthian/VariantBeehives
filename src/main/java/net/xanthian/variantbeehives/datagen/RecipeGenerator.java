@@ -2,13 +2,19 @@ package net.xanthian.variantbeehives.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
+
 import net.xanthian.variantbeehives.block.Beehives;
+import net.xanthian.variantbeehives.utils.ModItemTags;
 
 import java.util.function.Consumer;
 
@@ -20,94 +26,33 @@ public class RecipeGenerator extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.ACACIA_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.ACACIA_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.ACACIA_BEEHIVE)));
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.ACACIA_BEEHIVE, Blocks.ACACIA_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.BAMBOO_BEEHIVE, Blocks.BAMBOO_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.BIRCH_BEEHIVE, Blocks.BIRCH_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.CHERRY_BEEHIVE, Blocks.CHERRY_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.CRIMSON_BEEHIVE, Blocks.CRIMSON_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.DARK_OAK_BEEHIVE, Blocks.DARK_OAK_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.JUNGLE_BEEHIVE, Blocks.JUNGLE_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.MANGROVE_BEEHIVE, Blocks.MANGROVE_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.SPRUCE_BEEHIVE, Blocks.SPRUCE_PLANKS);
+        RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.WARPED_BEEHIVE, Blocks.WARPED_PLANKS);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.BAMBOO_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.BAMBOO_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.BAMBOO_BEEHIVE)));
+        // Uncrafting recipe
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRAFTING_TABLE,1)
+                .input(ModItemTags.BEEHIVES)
+                .criterion("has_beehive", InventoryChangedCriterion.Conditions.items(Items.BEEHIVE))
+                .offerTo(exporter,new Identifier("variantbeehives", "beehive"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.BIRCH_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.BIRCH_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.BIRCH_BEEHIVE)));
+    }
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.CHERRY_BEEHIVE)
+    public static void offerBeehiveRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.CHERRY_PLANKS)
+                .input('P', input)
                 .pattern("PPP")
                 .pattern("HHH")
                 .pattern("PPP")
                 .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.CHERRY_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.CRIMSON_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.CRIMSON_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.CRIMSON_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.DARK_OAK_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.DARK_OAK_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.DARK_OAK_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.JUNGLE_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.JUNGLE_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.JUNGLE_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.MANGROVE_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.MANGROVE_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.MANGROVE_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.SPRUCE_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.SPRUCE_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.SPRUCE_BEEHIVE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Beehives.WARPED_BEEHIVE)
-                .input('H', Items.HONEYCOMB)
-                .input('P', Blocks.WARPED_PLANKS)
-                .pattern("PPP")
-                .pattern("HHH")
-                .pattern("PPP")
-                .criterion(FabricRecipeProvider.hasItem(Items.HONEYCOMB), FabricRecipeProvider.conditionsFromItem(Items.HONEYCOMB))
-                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Beehives.WARPED_BEEHIVE)));
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(output)));
     }
 }

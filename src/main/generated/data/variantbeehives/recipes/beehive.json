@@ -1,11 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
       "tag": "variantbeehives:beehives"
     }
   ],
   "result": {
-    "item": "minecraft:beehive"
+    "item": "minecraft:crafting_table"
   }
 }

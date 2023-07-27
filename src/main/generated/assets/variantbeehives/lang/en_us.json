@@ -1,9 +1,5 @@
 {
-  "_comment": "Rename Vanilla",
   "block.minecraft.beehive": "Oak Beehive",
-
-  "variantbeehives.group.variantbeehives" : "Variant Beehives",
-
   "block.variantbeehives.acacia_beehive": "Acacia Beehive",
   "block.variantbeehives.bamboo_beehive": "Bamboo Beehive",
   "block.variantbeehives.birch_beehive": "Birch Beehive",
@@ -13,5 +9,6 @@
   "block.variantbeehives.jungle_beehive": "Jungle Beehive",
   "block.variantbeehives.mangrove_beehive": "Mangrove Beehive",
   "block.variantbeehives.spruce_beehive": "Spruce Beehive",
-  "block.variantbeehives.warped_beehive": "Warped Beehive"
+  "block.variantbeehives.warped_beehive": "Warped Beehive",
+  "variantbeehives.group.variantbeehives": "Variant Beehives"
 }

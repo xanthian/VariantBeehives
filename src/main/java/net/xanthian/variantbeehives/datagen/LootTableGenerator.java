@@ -2,6 +2,7 @@ package net.xanthian.variantbeehives.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.xanthian.variantbeehives.block.Beehives;
 
 
@@ -12,15 +13,15 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(Beehives.ACACIA_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.BAMBOO_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.BIRCH_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.CHERRY_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.CRIMSON_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.DARK_OAK_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.JUNGLE_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.MANGROVE_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.SPRUCE_BEEHIVE, block -> beehiveDrops(block));
-        addDrop(Beehives.WARPED_BEEHIVE, block -> beehiveDrops(block));
+        addDrop(Beehives.ACACIA_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.BAMBOO_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.BIRCH_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.CHERRY_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.CRIMSON_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.DARK_OAK_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.JUNGLE_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.MANGROVE_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.SPRUCE_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
+        addDrop(Beehives.WARPED_BEEHIVE, BlockLootTableGenerator::beehiveDrops);
     }
 }
