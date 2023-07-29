@@ -38,7 +38,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         RecipeGenerator.offerBeehiveRecipe(exporter,Beehives.WARPED_BEEHIVE, Blocks.WARPED_PLANKS);
 
         // Uncrafting recipe
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRAFTING_TABLE,1)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.BEEHIVE,1)
                 .input(ModItemTags.BEEHIVES)
                 .criterion("has_beehive", InventoryChangedCriterion.Conditions.items(Items.BEEHIVE))
                 .offerTo(exporter,new Identifier("variantbeehives", "beehive"));
