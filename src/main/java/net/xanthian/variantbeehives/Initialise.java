@@ -1,19 +1,10 @@
 package net.xanthian.variantbeehives;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-
-import net.xanthian.variantbeehives.block.Beehives;
+import net.fabricmc.loader.api.FabricLoader;
+import net.xanthian.variantbeehives.block.Vanilla;
+import net.xanthian.variantbeehives.block.compatability.*;
+import net.xanthian.variantbeehives.utils.ModCreativeTab;
 import net.xanthian.variantbeehives.utils.ModPOITypes;
 import net.xanthian.variantbeehives.utils.ModRegistries;
 
@@ -21,33 +12,52 @@ public class Initialise implements ModInitializer {
 
     public static final String MOD_ID = "variantbeehives";
 
-    public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "variantbeehives"));
+    public static void ifModLoaded(String modId, Runnable runnable) {
+        if (FabricLoader.getInstance().isModLoaded(modId)) {
+            runnable.run();
+        }
+    }
 
     @Override
     public void onInitialize() {
 
-        Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
-                .displayName(Text.translatable("variantbeehives.group.variantbeehives"))
-                .icon(() -> new ItemStack(Beehives.MANGROVE_BEEHIVE))
-                .entries((context, entries) -> {
-                    entries.add(Beehives.ACACIA_BEEHIVE);
-                    entries.add(Beehives.BAMBOO_BEEHIVE);
-                    entries.add(Beehives.BIRCH_BEEHIVE);
-                    entries.add(Beehives.CHERRY_BEEHIVE);
-                    entries.add(Beehives.CRIMSON_BEEHIVE);
-                    entries.add(Beehives.DARK_OAK_BEEHIVE);
-                    entries.add(Beehives.JUNGLE_BEEHIVE);
-                    entries.add(Beehives.MANGROVE_BEEHIVE);
-                    entries.add(Blocks.BEEHIVE); // Oak
-                    entries.add(Beehives.SPRUCE_BEEHIVE);
-                    entries.add(Beehives.WARPED_BEEHIVE);
-                })
-                .build());
+        Vanilla.registerVanillaBeehives();
 
-        Beehives.registerVanillaHives();
+        ifModLoaded("ad_astra", AdAstra::registerHives);
+
+        ifModLoaded("beachparty", BeachParty::registerHives);
+
+        ifModLoaded("betterarcheology", BetterArcheology::registerHives);
+
+        ifModLoaded("bewitchment", Bewitchment::registerHives);
+
+        ifModLoaded("biomemakeover", BiomeMakeover::registerHives);
+
+        ifModLoaded("blockus", Blockus::registerHives);
+
+        ifModLoaded("deeperdarker", DeeperAndDarker::registerHives);
+
+        ifModLoaded("eldritch_end", EldritchEnd::registerHives);
+
+        ifModLoaded("minecells", MineCells::registerHives);
+
+        ifModLoaded("natures_spirit", NaturesSpirit::registerHives);
+
+        ifModLoaded("promenade", Promenade::registerHives);
+
+        ifModLoaded("regions_unexplored", RegionsUnexplored::registerHives);
+
+        ifModLoaded("snifferplus", SnifferPlus::registerHives);
+
+        ifModLoaded("techreborn", TechReborn::registerHives);
+
+        ifModLoaded("vinery", Vinery::registerHives);
 
         ModRegistries.registerFuelandFlammable();
-
+        ModCreativeTab.registerItemGroup();
         ModPOITypes.init();
+
+        //Datagen Block - disable for client run
+        SnifferPlus.registerHives();
     }
 }

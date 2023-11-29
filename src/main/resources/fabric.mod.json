@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "variantbeehives",
   "version": "${version}",
-  "name": "Variant Bee Hives",
-  "description": "Bee Hives for all wood types",
+  "name": "Variant Beehives",
+  "description": "Beehives for all wood types",
   "authors": ["Xanthian"],
   "license": "MIT",
   "environment": "*",
@@ -14,9 +14,9 @@
   "mixins": ["variantbeehives.mixins.json"],
   "accessWidener": "variantbeehives.accesswidener",
   "depends": {
-    "fabricloader": ">=0.14.19",
+    "fabricloader": ">=0.14.20",
     "fabric": "*",
-    "minecraft": "1.20.x",
+    "minecraft": ">=1.20 <1.20.2",
     "java": ">=17"
     }
 }

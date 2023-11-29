@@ -2,6 +2,30 @@
   "replace": false,
   "values": [
     "variantbeehives:crimson_beehive",
-    "variantbeehives:warped_beehive"
+    "variantbeehives:crimson_beehive",
+    {
+      "id": "variantbeehives:bls_charred_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:prom_dark_amaranth_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ru_brimwood_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ru_cobalt_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ru_dead_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ru_yellow_bioshroom_beehive",
+      "required": false
+    }
   ]
 }
