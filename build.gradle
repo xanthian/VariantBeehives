@@ -9,7 +9,7 @@ group = project.maven_group
 base {
     archivesName = project.archives_base_name
 }
-def apikeyPropertiesFile = rootProject.file("secrets/secrets.properties");
+//def apikeyPropertiesFile = rootProject.file("secrets/secrets.properties");
 def apikeyProperties = new Properties()
 apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
 repositories {

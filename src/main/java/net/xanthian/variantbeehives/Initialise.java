@@ -58,6 +58,6 @@ public class Initialise implements ModInitializer {
         ModPOITypes.init();
 
         //Datagen Block - disable for client run
-        SnifferPlus.registerHives();
+        //SnifferPlus.registerHives();
     }
 }
