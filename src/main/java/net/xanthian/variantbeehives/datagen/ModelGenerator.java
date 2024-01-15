@@ -33,8 +33,13 @@ public class ModelGenerator extends FabricModelProvider {
         registerModel(blockStateModelGenerator, Bewitchment.BW_HIVES);
         registerModel(blockStateModelGenerator, BiomeMakeover.BM_HIVES);
         registerModel(blockStateModelGenerator, Blockus.BLS_HIVES);
+        registerModel(blockStateModelGenerator, Botania.BOT_HIVES);
+        registerModel(blockStateModelGenerator, Cinderscapes.CS_HIVES);
         registerModel(blockStateModelGenerator, DeeperAndDarker.DAD_HIVES);
+        registerModel(blockStateModelGenerator, Desolation.DS_HIVES);
+        registerModel(blockStateModelGenerator, Ecologics.ECO_HIVES);
         registerModel(blockStateModelGenerator, EldritchEnd.EE_HIVES);
+        registerModel(blockStateModelGenerator, Meadow.LDM_HIVES);
         registerModel(blockStateModelGenerator, MineCells.MC_HIVES);
         registerModel(blockStateModelGenerator, NaturesSpirit.NS_HIVES);
         registerModel(blockStateModelGenerator, Promenade.PROM_HIVES);

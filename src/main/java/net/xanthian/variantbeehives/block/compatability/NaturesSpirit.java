@@ -23,11 +23,13 @@ public class NaturesSpirit {
     public static Block NS_FIR_BEEHIVE;
     public static Block NS_GHAF_BEEHIVE;
     public static Block NS_JOSHUA_BEEHIVE;
-    public static Block NS_MAPLE_BEEHIVE;
     public static Block NS_LARCH_BEEHIVE;
+    public static Block NS_MAHOGANY_BEEHIVE;
+    public static Block NS_MAPLE_BEEHIVE;
     public static Block NS_OLIVE_BEEHIVE;
     public static Block NS_PALO_VERDE_BEEHIVE;
     public static Block NS_REDWOOD_BEEHIVE;
+    public static Block NS_SAXAUL_BEEHIVE;
     public static Block NS_SUGI_BEEHIVE;
     public static Block NS_WILLOW_BEEHIVE;
     public static Block NS_WISTERIA_BEEHIVE;
@@ -41,10 +43,12 @@ public class NaturesSpirit {
         NS_GHAF_BEEHIVE = registerBeehives("ns_ghaf_beehive");
         NS_JOSHUA_BEEHIVE = registerBeehives("ns_joshua_beehive");
         NS_LARCH_BEEHIVE = registerBeehives("ns_larch_beehive");
+        NS_MAHOGANY_BEEHIVE = registerBeehives("ns_mahogany_beehive");
         NS_MAPLE_BEEHIVE = registerBeehives("ns_maple_beehive");
         NS_OLIVE_BEEHIVE = registerBeehives("ns_olive_beehive");
         NS_PALO_VERDE_BEEHIVE = registerBeehives("ns_palo_verde_beehive");
         NS_REDWOOD_BEEHIVE = registerBeehives("ns_redwood_beehive");
+        NS_SAXAUL_BEEHIVE = registerBeehives("ns_saxaul_beehive");
         NS_SUGI_BEEHIVE = registerBeehives("ns_sugi_beehive");
         NS_WILLOW_BEEHIVE = registerBeehives("ns_willow_beehive");
         NS_WISTERIA_BEEHIVE = registerBeehives("ns_wisteria_beehive");

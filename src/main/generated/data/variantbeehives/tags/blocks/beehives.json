@@ -106,11 +106,55 @@
       "required": false
     },
     {
+      "id": "variantbeehives:bot_livingwood_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:bot_shimmerwood_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:bot_dreamwood_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:cs_scorched_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:cs_umbral_beehive",
+      "required": false
+    },
+    {
       "id": "variantbeehives:dad_echo_beehive",
       "required": false
     },
     {
+      "id": "variantbeehives:ds_charred_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:eco_walnut_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:eco_coconut_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:eco_flowering_azalea_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:eco_azalea_beehive",
+      "required": false
+    },
+    {
       "id": "variantbeehives:ee_primordial_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ldm_pine_beehive",
       "required": false
     },
     {
@@ -134,6 +178,10 @@
       "required": false
     },
     {
+      "id": "variantbeehives:ns_saxaul_beehive",
+      "required": false
+    },
+    {
       "id": "variantbeehives:ns_cedar_beehive",
       "required": false
     },
@@ -147,6 +195,10 @@
     },
     {
       "id": "variantbeehives:ns_cypress_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ns_mahogany_beehive",
       "required": false
     },
     {
@@ -242,14 +294,6 @@
       "required": false
     },
     {
-      "id": "variantbeehives:ru_cherry_beehive",
-      "required": false
-    },
-    {
-      "id": "variantbeehives:ru_sculkwood_beehive",
-      "required": false
-    },
-    {
       "id": "variantbeehives:ru_blue_bioshroom_beehive",
       "required": false
     },
@@ -258,15 +302,15 @@
       "required": false
     },
     {
-      "id": "variantbeehives:ru_pink_painted_beehive",
-      "required": false
-    },
-    {
       "id": "variantbeehives:ru_brimwood_beehive",
       "required": false
     },
     {
       "id": "variantbeehives:ru_kapok_beehive",
+      "required": false
+    },
+    {
+      "id": "variantbeehives:ru_pink_painted_beehive",
       "required": false
     },
     {

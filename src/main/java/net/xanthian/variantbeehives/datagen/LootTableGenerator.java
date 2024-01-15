@@ -30,8 +30,13 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         registerLootTables(Bewitchment.BW_HIVES, "bewitchment");
         registerLootTables(BiomeMakeover.BM_HIVES, "biomemakeover");
         registerLootTables(Blockus.BLS_HIVES, "blockus");
+        registerLootTables(Botania.BOT_HIVES, "botania");
+        registerLootTables(Cinderscapes.CS_HIVES, "cinderscape");
         registerLootTables(DeeperAndDarker.DAD_HIVES, "deeperdarker");
+        registerLootTables(Desolation.DS_HIVES, "desolation");
+        registerLootTables(Ecologics.ECO_HIVES, "ecologics");
         registerLootTables(EldritchEnd.EE_HIVES, "eldritch_end");
+        registerLootTables(Meadow.LDM_HIVES, "meadow");
         registerLootTables(MineCells.MC_HIVES, "minecells");
         registerSpecialLootTable(NaturesSpirit.NS_HIVES, "natures_spirit");
         registerLootTables(Promenade.PROM_HIVES, "promenade");

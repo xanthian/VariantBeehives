@@ -59,8 +59,13 @@ public class RecipeGenerator extends FabricRecipeProvider {
         registerBeehiveRecipe(exporter, Bewitchment.BW_HIVES, "bewitchment");
         registerBeehiveRecipe(exporter, BiomeMakeover.BM_HIVES, "biomemakeover");
         registerBeehiveRecipe(exporter, Blockus.BLS_HIVES, "blockus");
+        //registerBeehiveRecipe(exporter, Botania.BOT_HIVES, "botania");
+        registerBeehiveRecipe(exporter, Cinderscapes.CS_HIVES, "cinderscapes");
         registerBeehiveRecipe(exporter, DeeperAndDarker.DAD_HIVES, "deeperdarker");
+        registerBeehiveRecipe(exporter, Desolation.DS_HIVES, "desolation");
+        registerBeehiveRecipe(exporter, Ecologics.ECO_HIVES, "ecologics");
         registerBeehiveRecipe(exporter, EldritchEnd.EE_HIVES, "eldritch_end");
+        registerBeehiveRecipe(exporter, Meadow.LDM_HIVES, "meadow");
         registerBeehiveRecipe(exporter, MineCells.MC_HIVES, "minecells");
         registerBeehiveRecipe(exporter, NaturesSpirit.NS_HIVES, "natures_spirit");
         registerBeehiveRecipe(exporter, Promenade.PROM_HIVES, "promenade");

@@ -34,8 +34,13 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         registerTags(Bewitchment.BW_HIVES);
         registerTags(BiomeMakeover.BM_HIVES);
         registerTags(Blockus.BLS_HIVES);
+        registerTags(Botania.BOT_HIVES);
+        registerTags(Cinderscapes.CS_HIVES);
         registerTags(DeeperAndDarker.DAD_HIVES);
+        registerTags(Desolation.DS_HIVES);
+        registerTags(Ecologics.ECO_HIVES);
         registerTags(EldritchEnd.EE_HIVES);
+        registerTags(Meadow.LDM_HIVES);
         registerTags(MineCells.MC_HIVES);
         registerTags(NaturesSpirit.NS_HIVES);
         registerTags(Promenade.PROM_HIVES);

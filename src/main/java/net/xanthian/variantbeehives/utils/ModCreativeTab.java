@@ -61,11 +61,32 @@ public class ModCreativeTab {
                                 entries.add(block);
                             }
                         }
+                        if (FabricLoader.getInstance().isModLoaded("botania")) {
+                            for (Block block : Botania.BOT_HIVES.values()) {
+                                entries.add(block);
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
+                            for (Block block : Cinderscapes.CS_HIVES.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
                             entries.add(DeeperAndDarker.DAD_ECHO_BEEHIVE);
                         }
+                        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+                            entries.add(Desolation.DS_CHARRED_BEEHIVE);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("ecologics")) {
+                            for (Block block : Ecologics.ECO_HIVES.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
                             entries.add(EldritchEnd.EE_PRIMORDIAL_BEEHIVE);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("meadow")) {
+                            entries.add(Meadow.LDM_PINE_BEEHIVE);
                         }
                         if (FabricLoader.getInstance().isModLoaded("minecells")) {
                             entries.add(MineCells.MC_PUTRID_BEEHIVE);
@@ -94,7 +115,6 @@ public class ModCreativeTab {
                         if (FabricLoader.getInstance().isModLoaded("vinery")) {
                             entries.add(Vinery.LDV_CHERRY_BEEHIVE);
                         }
-
                     })
                     .texture("variantbeehives.png").noRenderedName().build());
 

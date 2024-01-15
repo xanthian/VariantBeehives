@@ -58,9 +58,13 @@ public class LangFileGenerator extends FabricLanguageProvider {
         registerTranslations(translationBuilder, Bewitchment.BW_HIVES);
         registerTranslations(translationBuilder, BiomeMakeover.BM_HIVES);
         registerTranslations(translationBuilder, Blockus.BLS_HIVES);
+        registerTranslations(translationBuilder, Botania.BOT_HIVES);
+        registerTranslations(translationBuilder, Cinderscapes.CS_HIVES);
         registerTranslations(translationBuilder, DeeperAndDarker.DAD_HIVES);
+        registerTranslations(translationBuilder, Desolation.DS_HIVES);
+        registerTranslations(translationBuilder, Ecologics.ECO_HIVES);
         registerTranslations(translationBuilder, EldritchEnd.EE_HIVES);
-        registerTranslations(translationBuilder, MineCells.MC_HIVES);
+        registerTranslations(translationBuilder, Meadow.LDM_HIVES);
         registerTranslations(translationBuilder, NaturesSpirit.NS_HIVES);
         registerTranslations(translationBuilder, Promenade.PROM_HIVES);
         registerTranslations(translationBuilder, RegionsUnexplored.RU_HIVES);
