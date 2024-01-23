@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -21,14 +21,13 @@ import net.xanthian.variantbeehives.block.compatability.*;
 import net.xanthian.variantbeehives.utils.ModItemTags;
 
 import java.util.Map;
-import java.util.function.Consumer;
 
 public class RecipeGenerator extends FabricRecipeProvider {
     public RecipeGenerator(FabricDataOutput output) {
         super(output);
     }
 
-    public static void offerBeehiveRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+    public static void offerBeehiveRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .input('H', Items.HONEYCOMB)
                 .input('P', input)
@@ -40,7 +39,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerBeehiveRecipe(exporter, Vanilla.ACACIA_BEEHIVE, Blocks.ACACIA_PLANKS);
         offerBeehiveRecipe(exporter, Vanilla.BAMBOO_BEEHIVE, Blocks.BAMBOO_PLANKS);
@@ -82,11 +81,11 @@ public class RecipeGenerator extends FabricRecipeProvider {
 
     }
 
-    public void registerBeehiveRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> beehives, String modId) {
+    public void registerBeehiveRecipe(RecipeExporter exporter, Map<Identifier, Block> beehives, String modId) {
         registerBeehiveRecipe(exporter, beehives, modId, "_planks");
     }
 
-    public void registerBeehiveRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> beehives, String modId, String plankSuffix) {
+    public void registerBeehiveRecipe(RecipeExporter exporter, Map<Identifier, Block> beehives, String modId, String plankSuffix) {
         for (Map.Entry<Identifier, Block> entry : beehives.entrySet()) {
             Identifier beehiveId = entry.getKey();
             Block beehive = entry.getValue();
